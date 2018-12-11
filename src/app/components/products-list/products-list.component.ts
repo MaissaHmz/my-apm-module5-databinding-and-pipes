@@ -7,7 +7,6 @@ import { IProduct } from '../../domain/iproduct';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent implements OnInit {
-
   pageTitle: string = 'Product List';
   imageWidth: number = 50;
   imageMargin: number = 2;
@@ -58,7 +57,9 @@ export class ProductsListComponent implements OnInit {
 
  constructor() { }
 
- ngOnInit() {  }
+ ngOnInit(): void {
+   console.log('*********** dans le hook ngOnInit');
+   }
 
  toggleImage(): void {
     this.showImage = !this.showImage;
